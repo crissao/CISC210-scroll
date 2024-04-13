@@ -1,4 +1,4 @@
-#include "display.h"
+#include "scroll.h"
 
 int main () {
 	open_display();
