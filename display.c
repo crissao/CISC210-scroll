@@ -31,5 +31,6 @@ void display_letter(char letter, int xOffset, int yOffset){
 
 void clear_display(void){
 	clearFrameBuffer(fb,BLACK);
+	sleep(1);
 }
 
