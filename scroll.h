@@ -1,5 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include "sense.h"
+#include <linux/input.h>
+#include <stddef.h>
+
 
 //display.c
 void open_display(void);
