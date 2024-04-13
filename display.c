@@ -1,5 +1,6 @@
 #include "scroll.h"
 #define BLACK 0x0000
+#define WHITE 0xFFFF
 
 pi_framebuffer_t *fb = NULL;
 sense_fb_bitmap_t *bm;
