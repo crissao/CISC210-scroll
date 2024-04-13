@@ -7,11 +7,11 @@ scroll: input.o main.o display.o
 
 clean:
 	rm -f *.o scroll
-main.o: main.c display.h
+main.o: main.c scroll.h
 	cc -c main.c -I ~/include
-display.o: display.c display.h
+display.o: display.c scroll.h
 	cc -c display.c -I ~/include
-input.o:
+input.o: input.c scroll.h
 	cc -c input.c -I ~/include
 
 run: scroll
