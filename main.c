@@ -7,6 +7,7 @@ int main () {
 	display_letter('a', 11, 19);
 	sleep(1);
 	display_letter('a', -12, -5);
+	sleep(1);
 	clear_display();
 	close_display();
 	}
