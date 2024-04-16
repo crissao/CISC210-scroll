@@ -19,12 +19,15 @@ void close_display(void){
 
 void display_letter(char letter, int xOffset, int yOffset){
 	clearFrameBuffer(fb,BLACK);
-       	if (xOffset < 0){
-		while (xOffset < 0)
-		xOffset += 8;
+    if (xOffset < 0){
+		while (xOffset < 0){
+		    xOffset += 8;
+        }
 	}
 	if (yOffset < 0){
-		yOffset += 8;
+        while (yOffset < 0){
+		    yOffset += 8;
+        }
 	}
 	bm->pixel[xOffset%8][yOffset%8]=WHITE;
 }
