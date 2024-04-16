@@ -12,3 +12,16 @@ int main () {
 	close_display();
 	}
 
+/*
+void dot_roll(void){
+    int vx,vy;
+    printf("Input two integer values between -10 and 10, with a space between\n");
+    scanf("%d %d",&vx,&vy);
+    for(int i = 0; i; i++){
+        int x = ...;
+        int y = ...;
+        display_letter(x,y);
+    }
+}
+*/
+
