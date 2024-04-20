@@ -1,27 +1,26 @@
 #include "scroll.h"
 
+void dot_roll(void);
+
 int main () {
 	open_display();
-	display_letter('a', 2, 2);
-	sleep(1);
-	display_letter('a', 11, 19);
-	sleep(1);
-	display_letter('a', -12, -5);
-	sleep(1);
-	clear_display();
-	close_display();
+	display_letter('c',5.5,2.2);
+	dot_roll();
 	}
 
-/*
+
 void dot_roll(void){
     int vx,vy;
     printf("Input two integer values between -10 and 10, with a space between\n");
     scanf("%d %d",&vx,&vy);
-    for(int i = 0; i; i++){
-        int x = ...;
-        int y = ...;
-        display_letter(x,y);
+    int x = 0;
+    int y = 0;
+    int count = 0;
+    for(int i = 0; i>=0; i++){
+        x += vx*count;
+        y += vy*count;
+        display_letter('c',x,y);
+	count += 1;
     }
 }
-*/
 
