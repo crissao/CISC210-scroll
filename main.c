@@ -21,16 +21,18 @@ void dot_roll(void){
 	float stepy = vy / 10.0;
 	while (1) {
 		if (floatx >= 1.0) {
-			stepx--;
+			floatx--;
+			x++;
 		}
 		if (floaty >= 1.0) {
-			stepy--;
+			floaty--;
+			y++;
 		}
 		x = ((x % 8) + 8) % 8;
 		y = ((y % 8) + 8) % 8;
 		floatx += stepx;
 		floaty += stepy;
 		display_letter('c', x, y);
-		sleep(1);
+		usleep(100000);
 	}
 }
