@@ -15,8 +15,8 @@ void dot_roll(void){
     	scanf("%d %d",&vx,&vy);
     	int x = 0;
     	int y = 0;
-	float floatx = 7.0;
-	float floaty = 7.0;
+	float floatx = 0.0;
+	float floaty = 0.0;
 	float stepx = vx / 10.0;
 	float stepy = vy / 10.0;
 	while (1) {
