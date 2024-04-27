@@ -7,7 +7,7 @@ int running = 1, vx = 0, vy = 0;
 int count = 0, arg = 0;
 char letter = 'C';
 
-extern globalColor;
+extern char* globalColor;
 
 int main (int argc, char *argv[]) {
 	if (strcmp(argv[1], "-h") == 0) {
@@ -16,7 +16,7 @@ int main (int argc, char *argv[]) {
 	}
 	else if (strcmp(argv[1], "-c") == 0) {
 		arg = 2;
-		globalColor = *argv[2];
+		globalColor = argv[2];
 	}
 	else if (strcmp(argv[1], "-r") == 0) {
 		arg = 3;
