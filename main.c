@@ -11,6 +11,11 @@ char letter = 'C';
 int main () {
 	open_display();
 	open_input();
+	while (running) {
+		check_input(handler, 10);
+		dot_roll();
+	}
+	/*
 	float floatx = 0.0;
 	float floaty = 0.0;
 	int x = 0;
@@ -30,9 +35,9 @@ int main () {
 		y = ((y % 8) + 8) % 8;
 		floatx += stepx;
 		floaty += stepy;
-		display_letter(letter, x, y);
+	        display_letter(letter, x, y);
 		check_input(handler, 1000);
-	}
+	} */
 	clear_display();
 	close_input();
 	close_display();
@@ -61,7 +66,7 @@ void handler (unsigned int code){
     }
 }	
 
-/*
+
 void dot_roll(void){
    	int vx,vy;
    	printf("Input two integer values between -10 and 10, with a space between\n");
@@ -90,4 +95,4 @@ void dot_roll(void){
 	}
 
 }
-*/
+
