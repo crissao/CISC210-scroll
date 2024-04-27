@@ -10,7 +10,7 @@ sense_fb_bitmap_t *bm;
 int COLOR = WHITE;
 
 char* globalColor;
-int* degrees;
+char* globalDegrees;
 
 void open_display(void){
 	fb = getFrameBuffer();
@@ -34,6 +34,17 @@ void display_letter(char letter, int xOffset, int yOffset){
 			COLOR = BLUE;	
 		}
 	}
+	int degrees = 0;
+	if (globalDegrees == NULL){
+		degrees = 0;
+	} else if (strcmp(globalDegrees,"90")==0){
+		degrees = 90;
+	} else if (strcmp(globalDegrees,"180")==0){
+		degrees = 180;
+	} else if (strcmp(globalDegrees,"270")==0){
+		degrees = 270;	
+	}
+
 	if (degrees == 0) {
     		if (letter == 'C'){
 			bm->pixel[(1+xOffset)%8][(1+yOffset)%8]=COLOR;
@@ -230,10 +241,10 @@ void display_letter(char letter, int xOffset, int yOffset){
 			bm->pixel[(2+xOffset)%8][(3+yOffset)%8]=COLOR;
 			bm->pixel[(2+xOffset)%8][(4+yOffset)%8]=COLOR;
 			bm->pixel[(2+xOffset)%8][(5+yOffset)%8]=COLOR;
-			bm->pixel[(2+xOffset)%8][(1+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(1+yOffset)%8]=COLOR;
 			bm->pixel[(4+xOffset)%8][(1+yOffset)%8]=COLOR;
 			bm->pixel[(3+xOffset)%8][(1+yOffset)%8]=COLOR;
-			bm->pixel[(2+xOffset)%8][(1+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(6+yOffset)%8]=COLOR;
 		}
 		if (letter == 'R') {
 			bm->pixel[(2+xOffset)%8][(6+yOffset)%8]=COLOR;

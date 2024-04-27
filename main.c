@@ -8,6 +8,7 @@ int count = 0, arg = 0;
 char letter = 'C';
 
 extern char* globalColor;
+extern char* globalDegrees;
 
 int main (int argc, char *argv[]) {
 	if (argc > 1){
@@ -21,6 +22,7 @@ int main (int argc, char *argv[]) {
 		}
 		else if (strcmp(argv[1], "-r") == 0) {
 			arg = 3;
+			globalDegrees = argv[2];
 		}
 		else if (strcmp(argv[1], "-l") == 0) {
 			arg = 4;
