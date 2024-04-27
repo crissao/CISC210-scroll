@@ -35,100 +35,192 @@ void display_letter(char letter, int xOffset, int yOffset){
 		}
 	}
 	if (degrees == 0) {
-    	if (letter == 'C'){
-		bm->pixel[(1+xOffset)%8][(1+yOffset)%8]=COLOR;
-		bm->pixel[(2+xOffset)%8][(0+yOffset)%8]=COLOR;
-		bm->pixel[(3+xOffset)%8][(0+yOffset)%8]=COLOR;
-		bm->pixel[(4+xOffset)%8][(0+yOffset)%8]=COLOR;
-		bm->pixel[(5+xOffset)%8][(0+yOffset)%8]=COLOR;
-		bm->pixel[(6+xOffset)%8][(1+yOffset)%8]=COLOR;
-		bm->pixel[(7+xOffset)%8][(2+yOffset)%8]=COLOR;
-		bm->pixel[(7+xOffset)%8][(3+yOffset)%8]=COLOR;
-		bm->pixel[(7+xOffset)%8][(4+yOffset)%8]=COLOR;
-		bm->pixel[(7+xOffset)%8][(5+yOffset)%8]=COLOR;
-		bm->pixel[(6+xOffset)%8][(6+yOffset)%8]=COLOR;
-		bm->pixel[(5+xOffset)%8][(7+yOffset)%8]=COLOR;
-		bm->pixel[(4+xOffset)%8][(7+yOffset)%8]=COLOR;
-		bm->pixel[(3+xOffset)%8][(7+yOffset)%8]=COLOR;
-		bm->pixel[(2+xOffset)%8][(7+yOffset)%8]=COLOR;
-		bm->pixel[(1+xOffset)%8][(6+yOffset)%8]=COLOR;
+    		if (letter == 'C'){
+			bm->pixel[(1+xOffset)%8][(1+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(0+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(0+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(0+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(0+yOffset)%8]=COLOR;
+			bm->pixel[(6+xOffset)%8][(1+yOffset)%8]=COLOR;
+			bm->pixel[(7+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(7+xOffset)%8][(3+yOffset)%8]=COLOR;
+			bm->pixel[(7+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(7+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(6+xOffset)%8][(6+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(7+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(7+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(7+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(7+yOffset)%8]=COLOR;
+			bm->pixel[(1+xOffset)%8][(6+yOffset)%8]=COLOR;
 		
-	}
-	if (letter == 'O'){
-		bm->pixel[(0+xOffset)%8][(2+yOffset)%8]=COLOR;
-		bm->pixel[(1+xOffset)%8][(1+yOffset)%8]=COLOR;
-		bm->pixel[(2+xOffset)%8][(0+yOffset)%8]=COLOR;
-		bm->pixel[(3+xOffset)%8][(0+yOffset)%8]=COLOR;
-		bm->pixel[(4+xOffset)%8][(0+yOffset)%8]=COLOR;
-		bm->pixel[(5+xOffset)%8][(0+yOffset)%8]=COLOR;
-		bm->pixel[(6+xOffset)%8][(1+yOffset)%8]=COLOR;
-		bm->pixel[(7+xOffset)%8][(2+yOffset)%8]=COLOR;
-		bm->pixel[(7+xOffset)%8][(3+yOffset)%8]=COLOR;
-		bm->pixel[(7+xOffset)%8][(4+yOffset)%8]=COLOR;
-		bm->pixel[(7+xOffset)%8][(5+yOffset)%8]=COLOR;
-		bm->pixel[(6+xOffset)%8][(6+yOffset)%8]=COLOR;
-		bm->pixel[(5+xOffset)%8][(7+yOffset)%8]=COLOR;
-		bm->pixel[(4+xOffset)%8][(7+yOffset)%8]=COLOR;
-		bm->pixel[(3+xOffset)%8][(7+yOffset)%8]=COLOR;
-		bm->pixel[(2+xOffset)%8][(7+yOffset)%8]=COLOR;
-		bm->pixel[(1+xOffset)%8][(6+yOffset)%8]=COLOR;
-		bm->pixel[(0+xOffset)%8][(5+yOffset)%8]=COLOR;
-		bm->pixel[(0+xOffset)%8][(4+yOffset)%8]=COLOR;
-		bm->pixel[(0+xOffset)%8][(3+yOffset)%8]=COLOR;	
-	}
-	if (letter == 'L') {
-		bm->pixel[(5+xOffset)%8][(1+yOffset)%8]=COLOR;
-		bm->pixel[(5+xOffset)%8][(2+yOffset)%8]=COLOR;
-		bm->pixel[(5+xOffset)%8][(3+yOffset)%8]=COLOR;
-		bm->pixel[(5+xOffset)%8][(4+yOffset)%8]=COLOR;
-		bm->pixel[(5+xOffset)%8][(5+yOffset)%8]=COLOR;
-		bm->pixel[(5+xOffset)%8][(6+yOffset)%8]=COLOR;
-		bm->pixel[(4+xOffset)%8][(6+yOffset)%8]=COLOR;
-		bm->pixel[(3+xOffset)%8][(6+yOffset)%8]=COLOR;
-		bm->pixel[(2+xOffset)%8][(6+yOffset)%8]=COLOR;
-	}
-	if (letter == 'R') {
-		bm->pixel[(2+xOffset)%8][(1+yOffset)%8]=COLOR;
-		bm->pixel[(3+xOffset)%8][(1+yOffset)%8]=COLOR;
-		bm->pixel[(4+xOffset)%8][(1+yOffset)%8]=COLOR;
-		bm->pixel[(5+xOffset)%8][(1+yOffset)%8]=COLOR;
-		bm->pixel[(5+xOffset)%8][(2+yOffset)%8]=COLOR;
-		bm->pixel[(5+xOffset)%8][(3+yOffset)%8]=COLOR;
-		bm->pixel[(5+xOffset)%8][(4+yOffset)%8]=COLOR;
-		bm->pixel[(5+xOffset)%8][(5+yOffset)%8]=COLOR;
-		bm->pixel[(5+xOffset)%8][(6+yOffset)%8]=COLOR;
-		bm->pixel[(2+xOffset)%8][(2+yOffset)%8]=COLOR;
-		bm->pixel[(2+xOffset)%8][(3+yOffset)%8]=COLOR;
-		bm->pixel[(3+xOffset)%8][(3+yOffset)%8]=COLOR;
-		bm->pixel[(3+xOffset)%8][(5+yOffset)%8]=COLOR;
-		bm->pixel[(4+xOffset)%8][(4+yOffset)%8]=COLOR;
-		bm->pixel[(3+xOffset)%8][(5+yOffset)%8]=COLOR;
-		bm->pixel[(2+xOffset)%8][(6+yOffset)%8]=COLOR;
-		bm->pixel[(4+xOffset)%8][(3+yOffset)%8]=COLOR;
-	}
-	}
-	else if (degrees == 270) {
-		bm->pixel[(1+xOffset)%8][(1+yOffset)%8]=COLOR;
-		bm->pixel[(0+xOffset)%8][(2+yOffset)%8]=COLOR;
-		bm->pixel[(0+xOffset)%8][(3+yOffset)%8]=COLOR;
-		bm->pixel[(0+xOffset)%8][(4+yOffset)%8]=COLOR;
-		bm->pixel[(0+xOffset)%8][(5+yOffset)%8]=COLOR;
-		bm->pixel[(6+xOffset)%8][(1+yOffset)%8]=COLOR;
-		bm->pixel[(7+xOffset)%8][(2+yOffset)%8]=COLOR;
-		bm->pixel[(7+xOffset)%8][(3+yOffset)%8]=COLOR;
-		bm->pixel[(7+xOffset)%8][(4+yOffset)%8]=COLOR;
-		bm->pixel[(7+xOffset)%8][(5+yOffset)%8]=COLOR;
-		bm->pixel[(6+xOffset)%8][(6+yOffset)%8]=COLOR;
-		bm->pixel[(5+xOffset)%8][(7+yOffset)%8]=COLOR;
-		bm->pixel[(4+xOffset)%8][(7+yOffset)%8]=COLOR;
-		bm->pixel[(3+xOffset)%8][(7+yOffset)%8]=COLOR;
-		bm->pixel[(2+xOffset)%8][(7+yOffset)%8]=COLOR;
-		bm->pixel[(1+xOffset)%8][(6+yOffset)%8]=COLOR;
-
-	}
-	else if (degrees == 180) {
+		}
+		if (letter == 'O'){
+			bm->pixel[(0+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(1+xOffset)%8][(1+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(0+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(0+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(0+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(0+yOffset)%8]=COLOR;
+			bm->pixel[(6+xOffset)%8][(1+yOffset)%8]=COLOR;
+			bm->pixel[(7+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(7+xOffset)%8][(3+yOffset)%8]=COLOR;
+			bm->pixel[(7+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(7+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(6+xOffset)%8][(6+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(7+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(7+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(7+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(7+yOffset)%8]=COLOR;
+			bm->pixel[(1+xOffset)%8][(6+yOffset)%8]=COLOR;
+			bm->pixel[(0+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(0+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(0+xOffset)%8][(3+yOffset)%8]=COLOR;	
+		}
+		if (letter == 'L') {
+			bm->pixel[(5+xOffset)%8][(1+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(3+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(6+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(6+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(6+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(6+yOffset)%8]=COLOR;
+		}
+		if (letter == 'R') {
+			bm->pixel[(2+xOffset)%8][(1+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(1+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(1+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(1+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(3+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(6+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(3+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(3+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(3+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(6+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(3+yOffset)%8]=COLOR;
+		}
 	}
 	else if (degrees == 90) {
+		if (letter == 'C') {
+			bm->pixel[(1+xOffset)%8][(1+yOffset)%8]=COLOR;
+			bm->pixel[(0+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(0+xOffset)%8][(3+yOffset)%8]=COLOR;
+			bm->pixel[(0+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(0+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(6+xOffset)%8][(1+yOffset)%8]=COLOR;
+			bm->pixel[(7+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(7+xOffset)%8][(3+yOffset)%8]=COLOR;
+			bm->pixel[(7+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(7+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(6+xOffset)%8][(6+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(7+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(7+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(7+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(7+yOffset)%8]=COLOR;
+			bm->pixel[(1+xOffset)%8][(6+yOffset)%8]=COLOR;
+		}
+		if (letter == 'O') {
+			bm->pixel[(0+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(1+xOffset)%8][(1+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(0+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(0+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(0+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(0+yOffset)%8]=COLOR;
+			bm->pixel[(6+xOffset)%8][(1+yOffset)%8]=COLOR;
+			bm->pixel[(7+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(7+xOffset)%8][(3+yOffset)%8]=COLOR;
+			bm->pixel[(7+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(7+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(6+xOffset)%8][(6+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(7+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(7+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(7+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(7+yOffset)%8]=COLOR;
+			bm->pixel[(1+xOffset)%8][(6+yOffset)%8]=COLOR;
+			bm->pixel[(0+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(0+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(0+xOffset)%8][(3+yOffset)%8]=COLOR;	
+
+		}
+		if (letter == 'L') {
+			bm->pixel[(1+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(1+xOffset)%8][(3+yOffset)%8]=COLOR;
+			bm->pixel[(1+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(1+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(6+xOffset)%8][(5+yOffset)%8]=COLOR;
+
+		}
+		if (letter == 'R') {
+			bm->pixel[(6+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(6+xOffset)%8][(3+yOffset)%8]=COLOR;
+			bm->pixel[(6+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(6+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(1+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(6+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(3+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(3+yOffset)%8]=COLOR;
+			bm->pixel[(1+xOffset)%8][(2+yOffset)%8]=COLOR;
+
+		}
+	}
+
+	else if (degrees == 180) {
+		if (letter == 'C') {
+		}
+		if (letter == 'O') {
+		}
+		if (letter == 'L') {
+		}
+		if (letter == 'R') {
+			bm->pixel[(2+xOffset)%8][(6+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(6+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(6+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(6+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(1+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(3+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(2+xOffset)%8][(6+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(5+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(4+yOffset)%8]=COLOR;
+			bm->pixel[(3+xOffset)%8][(3+yOffset)%8]=COLOR;
+			bm->pixel[(4+xOffset)%8][(2+yOffset)%8]=COLOR;
+			bm->pixel[(5+xOffset)%8][(1+yOffset)%8]=COLOR;
+
+		}
+	}
+	else if (degrees == 270) {
+		if (letter == 'C') {
+		}
+		if (letter == 'O') {
+		}
+		if (letter == 'L') {
+		}
+		if (letter == 'R') {
+		}
+
 	}
 	
 }
