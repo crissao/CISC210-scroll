@@ -1,19 +1,15 @@
 #include "scroll.h"
 #define BLACK 0x0000
+#define RED 0x8000
+#define GREEN 0x07e0
+#define BLUE 0x0000F
+#define WHITE 0xFFFF
 
 pi_framebuffer_t *fb = NULL;
 sense_fb_bitmap_t *bm;
+int COLOR = WHITE;
 
 char* globalColor;
-if (strcmp(globalColor,"red")==0){
-	#define COLOR 0x8000
-} else if (strcmp(globalColor,"green")==0){
-	#define COLOR 0x07e0
-} else if (strcmp(globalColor,"blue")==0){
-	#define COLOR 0x0000F
-} else { 
-	#define COLOR 0xFFFF
-}
 
 
 void open_display(void){
@@ -29,6 +25,13 @@ void close_display(void){
 
 void display_letter(char letter, int xOffset, int yOffset){
 	clearFrameBuffer(fb,BLACK);
+	if (strcmp(globalColor,"red")==0){
+		COLOR = RED;
+	} else if (strcmp(globalColor,"green")==0){
+		COLOR = GREEN;
+	} else if (strcmp(globalColor,"blue")==0){
+		COLOR = BLUE;	
+	}
     	if (letter == 'C'){
 		bm->pixel[(1+xOffset)%8][(1+yOffset)%8]=COLOR;
 		bm->pixel[(2+xOffset)%8][(0+yOffset)%8]=COLOR;
