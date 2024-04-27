@@ -4,7 +4,7 @@
 #include "sense.h"
 #include <linux/input.h>
 #include <stddef.h>
-
+#include <string.h>
 
 //display.c
 void open_display(void);
