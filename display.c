@@ -47,6 +47,28 @@ void display_letter(char letter, int xOffset, int yOffset){
     		bm->pixel[2][7]=BLUE;
    		bm->pixel[1][6]=PURPLE;	
 	}
+	if (letter == 'O'){
+		bm->pixel[0][2]=PINK;
+   		bm->pixel[1][1]=PURPLE;
+    		bm->pixel[2][0]=BLUE;
+    		bm->pixel[3][0]=LIGHTBLUE;
+    		bm->pixel[4][0]=GREEN;
+    		bm->pixel[5][0]=YELLOW;
+    		bm->pixel[6][1]=ORANGE;
+    		bm->pixel[7][2]=RED;
+    		bm->pixel[7][3]=RED;
+    		bm->pixel[7][4]=RED;
+    		bm->pixel[7][5]=RED;
+    		bm->pixel[6][6]=ORANGE;
+    		bm->pixel[5][7]=YELLOW;
+    		bm->pixel[4][7]=GREEN;
+    		bm->pixel[3][7]=LIGHTBLUE;
+    		bm->pixel[2][7]=BLUE;
+    		bm->pixel[1][6]=PURPLE;
+    		bm->pixel[0][5]=PINK;
+    		bm->pixel[0][4]=PINK;
+    		bm->pixel[0][3]=PINK;
+	}
 	if (letter == 'L') {
     		bm->pixel[5][1]=WHITE;
     		bm->pixel[5][2]=WHITE;
@@ -57,6 +79,7 @@ void display_letter(char letter, int xOffset, int yOffset){
     		bm->pixel[4][6]=WHITE;
     		bm->pixel[3][6]=WHITE;
     		bm->pixel[2][6]=WHITE;
+	}
 	if (letter == 'R') {
 		bm->pixel[2][1]=WHITE;
     		bm->pixel[3][1]=WHITE;
