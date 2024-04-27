@@ -10,19 +10,21 @@ char letter = 'C';
 extern char* globalColor;
 
 int main (int argc, char *argv[]) {
-	if (strcmp(argv[1], "-h") == 0) {
-		arg = 1;
-		printf("this is a help message");
-	}
-	else if (strcmp(argv[1], "-c") == 0) {
-		arg = 2;
-		globalColor = argv[2];
-	}
-	else if (strcmp(argv[1], "-r") == 0) {
-		arg = 3;
-	}
-	else if (strcmp(argv[1], "-l") == 0) {
-		arg = 4;
+	if (argc > 1){
+		if (strcmp(argv[1], "-h") == 0) {
+			arg = 1;
+			printf("this is a help message");
+		}
+		else if (strcmp(argv[1], "-c") == 0) {
+			arg = 2;
+			globalColor = argv[2];
+		}
+		else if (strcmp(argv[1], "-r") == 0) {
+			arg = 3;
+		}
+		else if (strcmp(argv[1], "-l") == 0) {
+			arg = 4;
+		}
 	}
 	open_display();
 	open_input();

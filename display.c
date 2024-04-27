@@ -25,12 +25,14 @@ void close_display(void){
 
 void display_letter(char letter, int xOffset, int yOffset){
 	clearFrameBuffer(fb,BLACK);
-	if (strcmp(globalColor,"red")==0){
-		COLOR = RED;
-	} else if (strcmp(globalColor,"green")==0){
-		COLOR = GREEN;
-	} else if (strcmp(globalColor,"blue")==0){
-		COLOR = BLUE;	
+	if(globalColor != NULL){
+		if (strcmp(globalColor,"red")==0){
+			COLOR = RED;
+		} else if (strcmp(globalColor,"green")==0){
+			COLOR = GREEN;
+		} else if (strcmp(globalColor,"blue")==0){
+			COLOR = BLUE;	
+		}
 	}
 	if (degrees == 0) {
     	if (letter == 'C'){
