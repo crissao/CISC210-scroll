@@ -68,9 +68,7 @@ void handler (unsigned int code){
 
 
 void dot_roll(void){
-   	int vx,vy;
    	printf("Input two integer values between -10 and 10, with a space between\n");
-    	scanf("%d %d",&vx,&vy);
     	int x = 0;
     	int y = 0;
 	float floatx = 0.0;
