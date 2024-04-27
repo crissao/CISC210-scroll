@@ -47,7 +47,38 @@ void display_letter(char letter, int xOffset, int yOffset){
     		bm->pixel[2][7]=BLUE;
    		bm->pixel[1][6]=PURPLE;	
 	}
+	if (letter == 'L') {
+    		bm->pixel[5][1]=WHITE;
+    		bm->pixel[5][2]=WHITE;
+   		bm->pixel[5][3]=WHITE;
+    		bm->pixel[5][4]=WHITE;
+    		bm->pixel[5][5]=WHITE;
+    		bm->pixel[5][6]=WHITE;
+    		bm->pixel[4][6]=WHITE;
+    		bm->pixel[3][6]=WHITE;
+    		bm->pixel[2][6]=WHITE;
+	if (letter == 'R') {
+		bm->pixel[2][1]=WHITE;
+    		bm->pixel[3][1]=WHITE;
+    		bm->pixel[4][1]=WHITE;
+    		bm->pixel[5][1]=WHITE;
+    		bm->pixel[5][2]=WHITE;
+    		bm->pixel[5][3]=WHITE;
+   		bm->pixel[5][4]=WHITE;
+    		bm->pixel[5][5]=WHITE;
+    		bm->pixel[5][6]=WHITE;
+    		bm->pixel[2][2]=WHITE;
+    		bm->pixel[2][3]=WHITE;
+    		bm->pixel[3][3]=WHITE;
+    		bm->pixel[3][5]=WHITE;
+    		bm->pixel[4][4]=WHITE;
+    		bm->pixel[3][5]=WHITE;
+    		bm->pixel[2][6]=WHITE;
+    		bm->pixel[4][3]=WHITE;
 
+	}
+
+}
 void clear_display(void){
 	clearFrameBuffer(fb,BLACK);
 	sleep(1);
