@@ -26,6 +26,7 @@ int main (int argc, char *argv[]) {
 		}
 		else if (strcmp(argv[1], "-l") == 0) {
 			arg = 4;
+			letter = 'L';
 		}
 	}
 	open_display();
@@ -74,11 +75,23 @@ void handler (unsigned int code){
     	}else if(code == KEY_ENTER) {
 		count += 1;
 		if (count == 1){
-			letter = 'O';
+			if (arg == 4) {
+				letter = 'R';
+			} else {
+				letter = 'O';
+			}
 		} else if (count == 2){
-			letter = 'L';
+			if (arg == 4) {
+				letter = 'C';
+			} else {
+				letter = 'L';
+			}
 		} else if (count == 3){
-			letter = 'R';
+			if (arg == 4) {
+				letter = 'O';
+			} else {
+				letter = 'R';
+			}
 		} else if (count > 3){
 			running = 0;
 		}
