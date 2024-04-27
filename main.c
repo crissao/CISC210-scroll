@@ -4,11 +4,24 @@ void dot_roll(void);
 void handler(unsigned int code);
 
 int running = 1, vx = 0, vy = 0;
-int count = 0;
+int count = 0, arg = 0;
 char letter = 'C';
 
 
-int main () {
+int main (int argc, char *argv[]) {
+	if (strcmp(argv[1], "-h") == 0) {
+		arg = 1;
+		printf("this is a help message")
+	}
+	else if (strcmp(argv[1], "-c") == 0) {
+		arg = 2;
+	}
+	else if (strcmp(argv[1], "-r") == 0) {
+		arg = 3;
+	}
+	else if (strcmp(argv[1], "-l") == 0) {
+		arg = 4;
+	}
 	open_display();
 	open_input();
 	/* while (running) {
@@ -45,13 +58,13 @@ int main () {
 
 void handler (unsigned int code){
 	if(code == KEY_UP) {
-		vx--;
-    	}else if(code == KEY_DOWN) {
 		vx++;
+    	}else if(code == KEY_DOWN) {
+		vx--;
 	}else if(code == KEY_RIGHT) {
-		vy--;
-    	}else if(code == KEY_LEFT) {
 		vy++;
+	}else if(code == KEY_LEFT) {
+		vy--;
     	}else if(code == KEY_ENTER) {
 		count += 1;
 		if (count == 1){
@@ -65,6 +78,8 @@ void handler (unsigned int code){
 		}
     }
 }	
+
+
 
 /*
 void dot_roll(void){
