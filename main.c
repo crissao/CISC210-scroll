@@ -25,18 +25,18 @@ int main () {
 		float stepy = vy / 10.0;
 		if (floatx >= 1.0) {
 			floatx--;
-			x--;
+			x++;
 		}
 		if (floaty >= 1.0) {
 			floaty--;
-			y--;
+			y++;
 		}
 		x = ((x % 8) + 8) % 8;
 		y = ((y % 8) + 8) % 8;
 		floatx += stepx;
 		floaty += stepy;
 	        display_letter(letter, x, y);
-		check_input(handler, 1000);
+		check_input(handler, 10);
 	} 
 	clear_display();
 	close_input();
@@ -45,13 +45,13 @@ int main () {
 
 void handler (unsigned int code){
 	if(code == KEY_UP) {
-		vy++;
-    	}else if(code == KEY_DOWN) {
-		vy--;
-	}else if(code == KEY_RIGHT) {
-		vx++;
-    	}else if(code == KEY_LEFT) {
 		vx--;
+    	}else if(code == KEY_DOWN) {
+		vx++;
+	}else if(code == KEY_RIGHT) {
+		vy--;
+    	}else if(code == KEY_LEFT) {
+		vy++;
     	}else if(code == KEY_ENTER) {
 		count += 1;
 		if (count == 1){
