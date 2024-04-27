@@ -11,11 +11,11 @@ char letter = 'C';
 int main () {
 	open_display();
 	open_input();
-	while (running) {
+	/* while (running) {
 		check_input(handler, 10);
 		dot_roll();
-	}
-	/*
+	} */
+	
 	float floatx = 0.0;
 	float floaty = 0.0;
 	int x = 0;
@@ -37,7 +37,7 @@ int main () {
 		floaty += stepy;
 	        display_letter(letter, x, y);
 		check_input(handler, 1000);
-	} */
+	} 
 	clear_display();
 	close_input();
 	close_display();
@@ -66,7 +66,7 @@ void handler (unsigned int code){
     }
 }	
 
-
+/*
 void dot_roll(void){
     	int x = 0;
     	int y = 0;
@@ -91,5 +91,5 @@ void dot_roll(void){
 		usleep(100000);
 	}
 
-}
+} */
 
