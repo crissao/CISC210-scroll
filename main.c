@@ -14,7 +14,15 @@ int main (int argc, char *argv[]) {
 	if (argc > 1){
 		if (strcmp(argv[1], "-h") == 0) {
 			arg = 1;
-			printf("this is a help message");
+			printf("In order to run the program, type ./scroll into the command line.\n 
+				This command is input into the main function as argv[0].\n
+				Click the joystick down like a button to change the letter from C to O to L to R.\n
+				Move the joystick
+				In addition, you can type one of the following to be input into the main function as argv[1]:\n
+				-h: displays this help message\n
+				-c: changes the color of the pixels to red, green, blue, or white\n
+				-r: rotates the letters counterclockwise by 0, 90, 180, and 270 degrees\n
+				-l: changes the order of letters from 'COLR' to 'LRCO'");
 		}
 		else if (strcmp(argv[1], "-c") == 0) {
 			arg = 2;
