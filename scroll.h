@@ -5,6 +5,7 @@
 #include <linux/input.h>
 #include <stddef.h>
 #include <string.h>
+#include <math.h>
 
 //display.c
 void open_display(void);
