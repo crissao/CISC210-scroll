@@ -39,32 +39,21 @@ int main (int argc, char *argv[]) {
 	}
 	open_display();
 	open_input();
-	/* while (running) {
-		check_input(handler, 10);
-		dot_roll();
-	} */
-	
 	float floatx = 0.0;
 	float floaty = 0.0;
 	int x = 0;
     	int y = 0;
 	while(running){
-		float stepx = vx / 10.0;
-		float stepy = vy / 10.0;
-		if (floatx >= 1.0) {
-			floatx--;
-			x++;
-		}
-		if (floaty >= 1.0) {
-			floaty--;
-			y++;
-		}
-		x = ((x % 8) + 8) % 8;
-		y = ((y % 8) + 8) % 8;
-		floatx += stepx;
-		floaty += stepy;
-	        display_letter(letter, x, y);
-		check_input(handler, 10);
+    		float stepx = vx / 10.0;
+   		float stepy = vy / 10.0;
+    		floatx += stepx;
+    		floaty += stepy;
+    		int x = (int)round(floatx);
+    		int y = (int)round(floaty);
+    		x = (x % 8 + 8) % 8;
+    		y = (y % 8 + 8) % 8;
+    		display_letter(letter, x, y);
+    		check_input(handler, 10);		
 	} 
 	clear_display();
 	close_input();
@@ -73,9 +62,9 @@ int main (int argc, char *argv[]) {
 
 void handler (unsigned int code){
 	if(code == KEY_UP) {
-		vx++;
-    	}else if(code == KEY_DOWN) {
 		vx--;
+    	}else if(code == KEY_DOWN) {
+		vx++;
 	}else if(code == KEY_RIGHT) {
 		vy++;
 	}else if(code == KEY_LEFT) {
@@ -108,30 +97,4 @@ void handler (unsigned int code){
 
 
 
-/*
-void dot_roll(void){
-    	int x = 0;
-    	int y = 0;
-	float floatx = 0.0;
-	float floaty = 0.0;
-	float stepx = vx / 10.0;
-	float stepy = vy / 10.0;
-	while (1) {
-		if (floatx >= 1.0) {
-			floatx--;
-			x--;
-		}
-		if (floaty >= 1.0) {
-			floaty--;
-			y--;
-		}
-		x = ((x % 8) + 8) % 8;
-		y = ((y % 8) + 8) % 8;
-		floatx += stepx;
-		floaty += stepy;
-		display_letter('c', x, y);
-		usleep(100000);
-	}
-
-} */
 
