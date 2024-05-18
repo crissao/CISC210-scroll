@@ -14,16 +14,7 @@ int main (int argc, char *argv[]) {
 	if (argc > 1){
 		if (strcmp(argv[1], "-h") == 0) {
 			arg = 1;
-			printf("In order to run the program, type ./scroll into the command line.\n 
-				This command is input into the main function as argv[0].\n
-				Click the joystick down like a button to change the letter from C to O to L to R.\n
-				Move the joystick up, down, left, or right to get the letter to scroll that way.\n
-				Once the letter is scrolling, move the joystick in the same direction in order to speed it up.\n
-				In addition, you can type one of the following to be input into the main function as argv[1]:\n
-				-h: displays this help message\n
-				-c: changes the color of the pixels to red, green, blue, or white\n
-				-r: rotates the letters counterclockwise by 0, 90, 180, and 270 degrees\n
-				-l: changes the order of letters from 'COLR' to 'LRCO'");
+			printf("In order to run the program, type ./scroll into the command line.\nThis command is input into the main function as argv[0].\nClick the joystick down like a button to change the letter from C to O to L to R.\nMove the joystick up, down, left, or right to get the letter to scroll that way.\nOnce the letter is scrolling, move the joystick in the same direction in order to speed it up.\nIn addition, you can type one of the following to be input into the main function as argv[1]:\n-h: displays this help message\n-c: changes the color of the pixels to red, green, blue, or white\n-r: rotates the letters counterclockwise by 0, 90, 180, and 270 degrees\n-l: changes the order of letters from COLR to LRCO");
 		}
 		else if (strcmp(argv[1], "-c") == 0) {
 			arg = 2;
